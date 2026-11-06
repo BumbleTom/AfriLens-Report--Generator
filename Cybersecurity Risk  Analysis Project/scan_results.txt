@@ -1,0 +1,42 @@
+# Nmap 7.991 scan initiated Tue Nov  3 18:21:13 2026 as: /usr/lib/nmap/nmap --privileged -A -oN scan_results.txt vulnerabilityreportgenerator.lovable.app
+Nmap scan report for vulnerabilityreportgenerator.lovable.app (185.41.148.2)
+Host is up (0.0051s latency).
+Other addresses for vulnerabilityreportgenerator.lovable.app (not scanned): 2a07:8240::2 2a07:8240::1 185.41.148.1
+rDNS record for 185.41.148.2: lovable-app-wd-2-4.p.l5e.io
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE  VERSION
+53/tcp   open  domain   Mikrotik dnsd
+80/tcp   open  http     Cloudflare http proxy
+|_http-server-header: cloudflare
+|_http-title: Did not follow redirect to https://vulnerabilityreportgenerator.lovable.app/
+443/tcp  open  ssl/http Cloudflare http proxy
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=lovable.app
+| Subject Alternative Name: DNS:lovable.app, DNS:*.lovable.app
+| Not valid before: 2026-10-10T23:33:33
+|_Not valid after:  2027-01-09T00:33:27
+|_http-title: VulnReport AI \xE2\x80\x94 Transform Vulnerability Scans into Security ...
+8080/tcp open  http     Cloudflare http proxy
+|_http-server-header: cloudflare
+|_http-title: Did not follow redirect to https://vulnerabilityreportgenerator.lovable.app:8080/
+8443/tcp open  ssl/http Cloudflare http proxy
+|_http-title: VulnReport AI \xE2\x80\x94 Transform Vulnerability Scans into Security ...
+|_http-server-header: cloudflare
+| ssl-cert: Subject: commonName=lovable.app
+| Subject Alternative Name: DNS:lovable.app, DNS:*.lovable.app
+| Not valid before: 2026-10-10T23:33:33
+|_Not valid after:  2027-01-09T00:33:27
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|bridge|general purpose
+Running (JUST GUESSING): AT&T embedded (89%), Oracle Virtualbox (88%), Slirp (88%), QEMU (86%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: AT&T BGW210 voice gateway (89%), Oracle Virtualbox Slirp NAT bridge (88%), QEMU user mode network gateway (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   9.00 ms lovable-app-wd-2-4.p.l5e.io (185.41.148.2)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  3 18:21:50 2026 -- 1 IP address (1 host up) scanned in 37.12 seconds
